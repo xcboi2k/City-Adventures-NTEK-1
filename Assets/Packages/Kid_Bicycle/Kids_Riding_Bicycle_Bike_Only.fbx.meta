@@ -1,0 +1,436 @@
+fileFormatVersion: 2
+guid: 47e8d8ff9cdee344281bd2cfa9751e14
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      74: 8626984807616764474
+    second: BICYCLE.004|Armature|mixamo.com|Layer0
+  - first:
+      74: -5875445985295910518
+    second: BICYCLE.004|BICYCLE.004Action
+  - first:
+      74: -1076315990594201297
+    second: BICYCLE.004|BICYCLE.010Action
+  - first:
+      74: 8414757796658554242
+    second: BICYCLE.004|BICYCLE.015Action
+  - first:
+      74: 5750144306229906636
+    second: BICYCLE.004|BICYCLE.021Action.001
+  - first:
+      74: -9036975278118892970
+    second: BICYCLE.004|BICYCLE.027Action
+  - first:
+      74: 1997540369798216498
+    second: BICYCLE.004|BICYCLE.032Action
+  - first:
+      74: 1720873503408117321
+    second: BICYCLE.004|BICYCLEAction
+  - first:
+      74: 1291116601756022102
+    second: BICYCLE.004|Pedals BICYCLE.001Action
+  - first:
+      74: 9176823088957710546
+    second: BICYCLE.004|Pedals BICYCLEAction
+  - first:
+      74: -3998698122616223738
+    second: BICYCLE.004|WHEEL_BACKAction
+  - first:
+      74: -1003042643097654791
+    second: BICYCLE|Armature|mixamo.com|Layer0
+  - first:
+      74: -5207828038287741114
+    second: BICYCLE|BICYCLE.004Action
+  - first:
+      74: -4804780178767230199
+    second: BICYCLE|BICYCLE.010Action
+  - first:
+      74: 8923310106048678467
+    second: BICYCLE|BICYCLE.015Action
+  - first:
+      74: -4734664212327862530
+    second: BICYCLE|BICYCLE.021Action.001
+  - first:
+      74: 4807300383906546474
+    second: BICYCLE|BICYCLE.027Action
+  - first:
+      74: 3958672193885498959
+    second: BICYCLE|BICYCLE.032Action
+  - first:
+      74: -7494676328860805099
+    second: BICYCLE|BICYCLEAction
+  - first:
+      74: -6097664509012837568
+    second: BICYCLE|Pedals BICYCLE.001Action
+  - first:
+      74: -1958088176886902838
+    second: BICYCLE|Pedals BICYCLEAction
+  - first:
+      74: 4267951504979864184
+    second: BICYCLE|WHEEL_BACKAction
+  - first:
+      74: 4089149482527532862
+    second: BICYCLE.010|Armature|mixamo.com|Layer0
+  - first:
+      74: -1762691064694824339
+    second: BICYCLE.010|BICYCLE.004Action
+  - first:
+      74: 2834166886839186651
+    second: BICYCLE.010|BICYCLE.010Action
+  - first:
+      74: -9192764247051332229
+    second: BICYCLE.010|BICYCLE.015Action
+  - first:
+      74: -907707126475836601
+    second: BICYCLE.010|BICYCLE.021Action.001
+  - first:
+      74: -8859629900928469830
+    second: BICYCLE.010|BICYCLE.027Action
+  - first:
+      74: 4940372453055339692
+    second: BICYCLE.010|BICYCLE.032Action
+  - first:
+      74: 3368962447841960763
+    second: BICYCLE.010|BICYCLEAction
+  - first:
+      74: -4622560144073320480
+    second: BICYCLE.010|Pedals BICYCLE.001Action
+  - first:
+      74: 538059865870362082
+    second: BICYCLE.010|Pedals BICYCLEAction
+  - first:
+      74: 4036606365474248713
+    second: BICYCLE.010|WHEEL_BACKAction
+  - first:
+      74: 509917143567227309
+    second: BICYCLE.015|Armature|mixamo.com|Layer0
+  - first:
+      74: 1653359294036677430
+    second: BICYCLE.015|BICYCLE.004Action
+  - first:
+      74: -7737705846202021204
+    second: BICYCLE.015|BICYCLE.010Action
+  - first:
+      74: -5224020778717210464
+    second: BICYCLE.015|BICYCLE.015Action
+  - first:
+      74: -5171204762301988394
+    second: BICYCLE.015|BICYCLE.021Action.001
+  - first:
+      74: 7590299626107857189
+    second: BICYCLE.015|BICYCLE.027Action
+  - first:
+      74: -4544082261930385821
+    second: BICYCLE.015|BICYCLE.032Action
+  - first:
+      74: 4466557122430727211
+    second: BICYCLE.015|BICYCLEAction
+  - first:
+      74: -15770073707871849
+    second: BICYCLE.015|Pedals BICYCLE.001Action
+  - first:
+      74: -4938023378628760082
+    second: BICYCLE.015|Pedals BICYCLEAction
+  - first:
+      74: 5508352575769269364
+    second: BICYCLE.015|WHEEL_BACKAction
+  - first:
+      74: -347736388804226674
+    second: WHEEL_BACK|Armature|mixamo.com|Layer0
+  - first:
+      74: -1338675409448272341
+    second: WHEEL_BACK|BICYCLE.004Action
+  - first:
+      74: -4577039874551714250
+    second: WHEEL_BACK|BICYCLE.010Action
+  - first:
+      74: 4652371608357631915
+    second: WHEEL_BACK|BICYCLE.015Action
+  - first:
+      74: -2932811281849878876
+    second: WHEEL_BACK|BICYCLE.021Action.001
+  - first:
+      74: -3857134997705025758
+    second: WHEEL_BACK|BICYCLE.027Action
+  - first:
+      74: 1949633262839050655
+    second: WHEEL_BACK|BICYCLE.032Action
+  - first:
+      74: -4431689875912370077
+    second: WHEEL_BACK|BICYCLEAction
+  - first:
+      74: 520303272219954481
+    second: WHEEL_BACK|Pedals BICYCLE.001Action
+  - first:
+      74: 4358143900083836006
+    second: WHEEL_BACK|Pedals BICYCLEAction
+  - first:
+      74: 5960610471893337239
+    second: WHEEL_BACK|WHEEL_BACKAction
+  - first:
+      74: 4392292494643630283
+    second: BICYCLE.021|Armature|mixamo.com|Layer0
+  - first:
+      74: 8188944475457904543
+    second: BICYCLE.021|BICYCLE.004Action
+  - first:
+      74: -9004902496370178919
+    second: BICYCLE.021|BICYCLE.010Action
+  - first:
+      74: -8021740298858273492
+    second: BICYCLE.021|BICYCLE.015Action
+  - first:
+      74: -5702821888309382106
+    second: BICYCLE.021|BICYCLE.021Action.001
+  - first:
+      74: -6897391603898148970
+    second: BICYCLE.021|BICYCLE.027Action
+  - first:
+      74: 3969288615891444992
+    second: BICYCLE.021|BICYCLE.032Action
+  - first:
+      74: -1461519649256472033
+    second: BICYCLE.021|BICYCLEAction
+  - first:
+      74: -1182355786558486202
+    second: BICYCLE.021|Pedals BICYCLE.001Action
+  - first:
+      74: 4323820789099738181
+    second: BICYCLE.021|Pedals BICYCLEAction
+  - first:
+      74: 4878211692776124459
+    second: BICYCLE.021|WHEEL_BACKAction
+  - first:
+      74: 1130872213520415125
+    second: WHEEL_FRONT|Armature|mixamo.com|Layer0
+  - first:
+      74: 2593412360753532529
+    second: WHEEL_FRONT|BICYCLE.004Action
+  - first:
+      74: -6001689487205480686
+    second: WHEEL_FRONT|BICYCLE.010Action
+  - first:
+      74: -9157138525245823346
+    second: WHEEL_FRONT|BICYCLE.015Action
+  - first:
+      74: 7019944246706115685
+    second: WHEEL_FRONT|BICYCLE.021Action.001
+  - first:
+      74: 271436571925437402
+    second: WHEEL_FRONT|BICYCLE.027Action
+  - first:
+      74: 7480729758341826827
+    second: WHEEL_FRONT|BICYCLE.032Action
+  - first:
+      74: 2847455266648329177
+    second: WHEEL_FRONT|BICYCLEAction
+  - first:
+      74: -5763963707653087180
+    second: WHEEL_FRONT|Pedals BICYCLE.001Action
+  - first:
+      74: 6732197189012524216
+    second: WHEEL_FRONT|Pedals BICYCLEAction
+  - first:
+      74: 1213638069145287631
+    second: WHEEL_FRONT|WHEEL_BACKAction
+  - first:
+      74: -3098158400523762540
+    second: Pedals BICYCLE|Armature|mixamo.com|Layer0
+  - first:
+      74: -3838090150645792568
+    second: Pedals BICYCLE|BICYCLE.004Action
+  - first:
+      74: -9144614979317713857
+    second: Pedals BICYCLE|BICYCLE.010Action
+  - first:
+      74: 6480876526043081506
+    second: Pedals BICYCLE|BICYCLE.015Action
+  - first:
+      74: 5749254056003416779
+    second: Pedals BICYCLE|BICYCLE.021Action.001
+  - first:
+      74: -186478787962959
+    second: Pedals BICYCLE|BICYCLE.027Action
+  - first:
+      74: 358380681898760189
+    second: Pedals BICYCLE|BICYCLE.032Action
+  - first:
+      74: 3908279649425742813
+    second: Pedals BICYCLE|BICYCLEAction
+  - first:
+      74: -3364643526434706726
+    second: Pedals BICYCLE|Pedals BICYCLE.001Action
+  - first:
+      74: -2798838334619056709
+    second: Pedals BICYCLE|Pedals BICYCLEAction
+  - first:
+      74: -6702891583985762242
+    second: Pedals BICYCLE|WHEEL_BACKAction
+  - first:
+      74: 8480981986846130718
+    second: Pedals BICYCLE.001|Armature|mixamo.com|Layer0
+  - first:
+      74: 6368304730659995298
+    second: Pedals BICYCLE.001|BICYCLE.004Action
+  - first:
+      74: -7225979814670693553
+    second: Pedals BICYCLE.001|BICYCLE.010Action
+  - first:
+      74: -5453775725579829599
+    second: Pedals BICYCLE.001|BICYCLE.015Action
+  - first:
+      74: 75684928587745022
+    second: Pedals BICYCLE.001|BICYCLE.021Action.001
+  - first:
+      74: 4182624797401125172
+    second: Pedals BICYCLE.001|BICYCLE.027Action
+  - first:
+      74: 577765920323923728
+    second: Pedals BICYCLE.001|BICYCLE.032Action
+  - first:
+      74: -5982243546325713908
+    second: Pedals BICYCLE.001|BICYCLEAction
+  - first:
+      74: -2886410399095581241
+    second: Pedals BICYCLE.001|Pedals BICYCLE.001Action
+  - first:
+      74: -7759852630732794461
+    second: Pedals BICYCLE.001|Pedals BICYCLEAction
+  - first:
+      74: -1296923334184654689
+    second: Pedals BICYCLE.001|WHEEL_BACKAction
+  - first:
+      74: 7931526000259694022
+    second: BICYCLE.032|Armature|mixamo.com|Layer0
+  - first:
+      74: -5037749749803021781
+    second: BICYCLE.032|BICYCLE.004Action
+  - first:
+      74: -8561856020399113370
+    second: BICYCLE.032|BICYCLE.010Action
+  - first:
+      74: -3623617800510459282
+    second: BICYCLE.032|BICYCLE.015Action
+  - first:
+      74: 657363191055344257
+    second: BICYCLE.032|BICYCLE.021Action.001
+  - first:
+      74: 2642559416305628976
+    second: BICYCLE.032|BICYCLE.027Action
+  - first:
+      74: 3968082972381812988
+    second: BICYCLE.032|BICYCLE.032Action
+  - first:
+      74: -1717253396306282941
+    second: BICYCLE.032|BICYCLEAction
+  - first:
+      74: -2548285784587492242
+    second: BICYCLE.032|Pedals BICYCLE.001Action
+  - first:
+      74: -8114698939429743920
+    second: BICYCLE.032|Pedals BICYCLEAction
+  - first:
+      74: -6128144057615297842
+    second: BICYCLE.032|WHEEL_BACKAction
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

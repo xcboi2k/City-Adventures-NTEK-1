@@ -1,0 +1,217 @@
+fileFormatVersion: 2
+guid: 5d5de2a41fd0b5f4783566c6b526e042
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      74: 4781951162920444690
+    second: Armature|ArmatureAction
+  - first:
+      74: -4791504522942941401
+    second: Armature|Armature|mixamo.com|Layer0
+  - first:
+      74: -1230420281654864606
+    second: Armature|BASKETAction
+  - first:
+      74: 2592009885336592476
+    second: Armature|BICYCLE.004Action
+  - first:
+      74: -6950310350900646621
+    second: Armature|BICYCLE.008Action
+  - first:
+      74: -6669754619799008166
+    second: Armature|BICYCLE.010Action
+  - first:
+      74: 6422859095674460594
+    second: Armature|BICYCLE.011Action
+  - first:
+      74: -2755798565036392533
+    second: Armature|BICYCLE.013Action
+  - first:
+      74: -5440350880233697776
+    second: Armature|BICYCLE.015Action
+  - first:
+      74: -3973091612413117129
+    second: Armature|BICYCLE.016Action
+  - first:
+      74: -8797726259997545375
+    second: Armature|BICYCLE.017Action
+  - first:
+      74: -3748551642555379741
+    second: Armature|BICYCLE.020Action
+  - first:
+      74: -1225096151394754134
+    second: Armature|BICYCLE.021Action.001
+  - first:
+      74: 7472371864991395002
+    second: Armature|BICYCLE.022Action
+  - first:
+      74: -6171797094405264235
+    second: Armature|BICYCLE.023Action
+  - first:
+      74: 3212498579436009010
+    second: Armature|BICYCLE.024Action
+  - first:
+      74: -8735084617906784761
+    second: Armature|BICYCLE.025Action
+  - first:
+      74: 4158714892995669574
+    second: Armature|BICYCLE.027Action
+  - first:
+      74: 556394798828656180
+    second: Armature|BICYCLE.030Action
+  - first:
+      74: 4089002524588592382
+    second: Armature|BICYCLE.031Action
+  - first:
+      74: 2295110206207564506
+    second: Armature|BICYCLE.032Action
+  - first:
+      74: -3250860913153670185
+    second: Armature|BICYCLE.033Action
+  - first:
+      74: 6961872571460630173
+    second: Armature|BICYCLE.034Action
+  - first:
+      74: -8132478660246260541
+    second: Armature|BICYCLE.035Action
+  - first:
+      74: 3756896287393530093
+    second: Armature|BICYCLE.036Action
+  - first:
+      74: 2641528244052195907
+    second: Armature|BICYCLEAction
+  - first:
+      74: -7591407284962951461
+    second: Armature|FEE_00_Naked_01Action
+  - first:
+      74: -3526044001676369483
+    second: Armature|FRONT_DRIVEAction
+  - first:
+      74: 2526912013666770861
+    second: Armature|HAN_00_Naked_01Action
+  - first:
+      74: 1618386811232741326
+    second: Armature|LEG_00_Shorts_01Action
+  - first:
+      74: -8408245453325202056
+    second: Armature|Pedals BICYCLE.001Action
+  - first:
+      74: 3585952554138290137
+    second: Armature|Pedals BICYCLEAction
+  - first:
+      74: 1362774587698203183
+    second: Armature|RIM_BACKAction
+  - first:
+      74: 6294298332919540292
+    second: Armature|RIM_FRONTAction
+  - first:
+      74: 6586490586842642331
+    second: Armature|STEERINGAction
+  - first:
+      74: -1311251502971728752
+    second: Armature|TOR_00_BasicTshirt_01Action
+  - first:
+      74: -1458809192959435019
+    second: Armature|WHEEL_BACKAction
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

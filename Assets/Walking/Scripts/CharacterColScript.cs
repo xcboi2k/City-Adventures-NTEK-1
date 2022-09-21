@@ -14,7 +14,7 @@ public class CharacterColScript : MonoBehaviour
     private void OnTriggerEnter(Collider Col)
     {
 
-        if (Col.gameObject.tag == "PlayerPointB")
+        if (Col.gameObject.tag == "Finish Point")
         {
             Debug.Log("You reached Point B.");
         }
