@@ -16,11 +16,12 @@ public class CharacterColScript : MonoBehaviour
 
         if (Col.gameObject.tag == "Finish Point")
         {
+            GameObject.Find("Game Controller").GetComponent<GameControllerScript>().isGameFinished = true;
             Debug.Log("You reached Point B.");
         }
 
         if(Col.gameObject.tag == "Coin"){
-            GameObject.Find("Game Controller").GetComponent<GameControllerScript>().score += 10;
+            GameObject.Find("Game Controller").GetComponent<GameControllerScript>().coin += 10;
             Debug.Log("Coin added to score.");
         }
 
