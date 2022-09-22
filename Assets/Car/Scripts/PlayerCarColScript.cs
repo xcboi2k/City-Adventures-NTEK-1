@@ -19,13 +19,14 @@ public class PlayerCarColScript : MonoBehaviour
     private void OnTriggerEnter(Collider Col)
     {
 
-        if (Col.gameObject.tag == "CarPointB")
+        if (Col.gameObject.tag == "Finish Point")
         {
+            GameObject.Find("Game Controller").GetComponent<GameControllerScript>().isGameFinished = true;
             Debug.Log("You reached Point B.");
         }
 
         if(Col.gameObject.tag == "Coin"){
-            GameObject.Find("Game Controller").GetComponent<GameControllerScript>().score += 10;
+            GameObject.Find("Game Controller").GetComponent<GameControllerScript>().coin += 10;
             Debug.Log("Coin added to score.");
         }
 
