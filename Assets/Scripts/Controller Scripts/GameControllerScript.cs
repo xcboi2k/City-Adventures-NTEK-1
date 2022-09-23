@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class GameControllerScript : MonoBehaviour
 {
+    private const string selectedLevel = "Selected Level";
+
     [Header("Canvas Objects")]
     public GameObject startGameCanvas; 
     public GameObject inGameCanvas; 
@@ -18,6 +20,7 @@ public class GameControllerScript : MonoBehaviour
     public Text ticketText;
 
     [Header("Finish Game Objects")]
+    public Text finalLevelText;
     public Text finalScoreText; 
     public Text finalCoinText; 
     public Text finalTicketText;
@@ -27,6 +30,9 @@ public class GameControllerScript : MonoBehaviour
     public int coin, ticketNum;
     [HideInInspector]
     public bool stopCountingScore, isGameFinished;
+
+    private string fsText;
+    public int finalScore;
 
     // Start is called before the first frame update
     void Start()
@@ -55,13 +61,6 @@ public class GameControllerScript : MonoBehaviour
         }
     }
 
-    // START VIEW
-    public void LoadStartView(){
-        // fetch level no. and name
-        // fetch level description
-        // fetch level character
-    }
-
     public void StartGame(){
         inGameCanvas.SetActive(true);
         startGameCanvas.SetActive(false);
@@ -88,7 +87,7 @@ public class GameControllerScript : MonoBehaviour
 
     public void QuitGame(){
         Time.timeScale = 1f;
-        Application.Quit();
+        SceneManager.LoadScene("MainMenuScene");
     }
 
     // MISSION MENU
@@ -110,10 +109,32 @@ public class GameControllerScript : MonoBehaviour
         finishGameCanvas.SetActive(true);
         Time.timeScale = 0f;
 
-        //fetch level no.
+        int getLevel = PlayerPrefs. GetInt(selectedLevel);
+        switch (getLevel)
+        {
+            case 1:
+                finalLevelText.text = "Level 1";
+                break;
+            case 2:
+                finalLevelText.text = "Level 2";
+                break;
+            case 3:
+                finalLevelText.text = "Level 3";
+                break;
+            case 4:
+                finalLevelText.text = "Level 4";
+                break;
+            case 5:
+                finalLevelText.text = "Level 5";
+                break;
+            default:
+                break;
+        }
         finalCoinText.text = "" + coin;
         finalTicketText.text = "" + ticketNum;
         finalScoreText.text = "" + (coin * 2f - ticketNum * 2f);
+        fsText = finalScoreText.text;
+        finalScore = int.Parse(fsText);
     }
 
     public void NextLevel(){

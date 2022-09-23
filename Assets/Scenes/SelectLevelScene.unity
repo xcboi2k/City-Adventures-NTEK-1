@@ -588,8 +588,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.999989, y: 17.999983}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -11.999989, y: 13}
+  m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &99329484
 MonoBehaviour:
@@ -624,7 +624,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor
+  m_Text: Study with classmate
 --- !u!222 &99329485
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -963,8 +963,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.999989, y: 17.999983}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -11.999989, y: 12.999988}
+  m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &218809097
 MonoBehaviour:
@@ -999,7 +999,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor
+  m_Text: Playing with my friend
 --- !u!222 &218809098
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1123,8 +1123,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.999989, y: 17.999983}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -11.999989, y: 9}
+  m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &283209027
 MonoBehaviour:
@@ -1159,7 +1159,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor
+  m_Text: Borrowing my classmate's book
 --- !u!222 &283209028
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1498,8 +1498,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.999989, y: 17.999983}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -11.999989, y: 12.999964}
+  m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &367708380
 MonoBehaviour:
@@ -1534,7 +1534,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor
+  m_Text: Playing with my friend
 --- !u!222 &367708381
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1553,6 +1553,7 @@ GameObject:
   m_Component:
   - component: {fileID: 378770014}
   - component: {fileID: 378770015}
+  - component: {fileID: 378770016}
   m_Layer: 0
   m_Name: SelectLevelController
   m_TagString: Untagged
@@ -1591,6 +1592,102 @@ MonoBehaviour:
   kickboardLevels: {fileID: 420137276}
   bikeLevels: {fileID: 1959326393}
   carLevels: {fileID: 620412872}
+--- !u!82 &378770016
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378770013}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 64803474eb40be34eb49d5bf602ef392, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &420137276
 GameObject:
   m_ObjectHideFlags: 0
@@ -1667,8 +1764,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.999989, y: 17.999983}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -11.999989, y: 12.999988}
+  m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &484443943
 MonoBehaviour:
@@ -1703,7 +1800,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor
+  m_Text: Hanging out
 --- !u!222 &484443944
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2177,8 +2274,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.999989, y: 17.999983}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -11.999989, y: 9.000015}
+  m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &532034868
 MonoBehaviour:
@@ -2213,7 +2310,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor
+  m_Text: "Mom\u2019 sick"
 --- !u!222 &532034869
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2257,8 +2354,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -12, y: 18}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -12, y: 9.000032}
+  m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &533682101
 MonoBehaviour:
@@ -2293,7 +2390,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor
+  m_Text: Playing with my friend
 --- !u!222 &533682102
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2737,8 +2834,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.999989, y: 17.999983}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -11.999989, y: 9.000015}
+  m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &686547764
 MonoBehaviour:
@@ -2773,7 +2870,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor
+  m_Text: First day of school
 --- !u!222 &686547765
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3237,8 +3334,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.999989, y: 17.999983}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -11.999989, y: 12.999988}
+  m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &925325540
 MonoBehaviour:
@@ -3273,7 +3370,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor
+  m_Text: Reporting at the Police Station
 --- !u!222 &925325541
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3830,8 +3927,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.999989, y: 17.999983}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -11.999989, y: 13}
+  m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1203058341
 MonoBehaviour:
@@ -3866,7 +3963,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor
+  m_Text: Study with classmate
 --- !u!222 &1203058342
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4260,8 +4357,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.999989, y: 17.999983}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -11.999989, y: 12.999964}
+  m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1274411362
 MonoBehaviour:
@@ -4296,7 +4393,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor
+  m_Text: Groceries at the food market
 --- !u!222 &1274411363
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4827,8 +4924,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -12, y: 18}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -12, y: 13.000029}
+  m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1518352094
 MonoBehaviour:
@@ -4863,7 +4960,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor
+  m_Text: Playing with my friend
 --- !u!222 &1518352095
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5042,8 +5139,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.999989, y: 17.999983}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -11.999989, y: 13.000011}
+  m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1638036703
 MonoBehaviour:
@@ -5078,7 +5175,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor
+  m_Text: Visiting my sick best friend
 --- !u!222 &1638036704
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5257,8 +5354,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -12, y: 18}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -12, y: 13}
+  m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1691274241
 MonoBehaviour:
@@ -5293,7 +5390,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor
+  m_Text: Borrowing my classmate's book
 --- !u!222 &1691274242
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5417,8 +5514,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.999989, y: 17.999983}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -11.999989, y: 13.000011}
+  m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1798343191
 MonoBehaviour:
@@ -5453,7 +5550,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor
+  m_Text: House of Auntie
 --- !u!222 &1798343192
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5657,8 +5754,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.999989, y: 17.999983}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -11.999989, y: 12.999964}
+  m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1829832211
 MonoBehaviour:
@@ -5693,7 +5790,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor
+  m_Text: Football game
 --- !u!222 &1829832212
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5737,8 +5834,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.999989, y: 17.999983}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -11.999989, y: 12.999988}
+  m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1834693280
 MonoBehaviour:
@@ -5773,7 +5870,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor
+  m_Text: First day of school
 --- !u!222 &1834693281
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6431,8 +6528,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -12, y: 18}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -12, y: 12.999981}
+  m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2000904835
 MonoBehaviour:
@@ -6467,7 +6564,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor
+  m_Text: Visiting my sick best friend
 --- !u!222 &2000904836
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6671,8 +6768,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.999989, y: 17.999983}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -11.999989, y: 13.000011}
+  m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2041705645
 MonoBehaviour:
@@ -6707,7 +6804,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor
+  m_Text: Mom's work
 --- !u!222 &2041705646
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6911,8 +7008,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.999989, y: 17.999983}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -11.999989, y: 9.000015}
+  m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2084569372
 MonoBehaviour:
@@ -6947,7 +7044,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor
+  m_Text: Borrowing my classmate's book
 --- !u!222 &2084569373
 CanvasRenderer:
   m_ObjectHideFlags: 0
