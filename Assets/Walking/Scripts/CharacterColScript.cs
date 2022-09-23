@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CharacterColScript : MonoBehaviour
 {
+    public AudioSource playerCharacterAudio;
+    public AudioClip coinClip, finishPointClip;
+
     private void OnCollisionEnter(Collision Col) {
         if (Col.gameObject.tag == "Gib"){
             GameObject.Find("Game Controller").GetComponent<GameControllerScript>().ticketNum += 1;
@@ -16,12 +19,15 @@ public class CharacterColScript : MonoBehaviour
 
         if (Col.gameObject.tag == "Finish Point")
         {
+            playerCharacterAudio.PlayOneShot(finishPointClip);
             GameObject.Find("Game Controller").GetComponent<GameControllerScript>().isGameFinished = true;
             Debug.Log("You reached Point B.");
         }
 
         if(Col.gameObject.tag == "Coin"){
+            playerCharacterAudio.PlayOneShot(coinClip);
             GameObject.Find("Game Controller").GetComponent<GameControllerScript>().coin += 10;
+            Destroy(Col.gameObject);
             Debug.Log("Coin added to score.");
         }
 
