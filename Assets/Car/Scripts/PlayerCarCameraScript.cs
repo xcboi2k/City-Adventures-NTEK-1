@@ -24,7 +24,7 @@ public class PlayerCarCameraScript : MonoBehaviour
     {
         mouseX += Input.GetAxis("Mouse X") * rotationSpeed;
         mouseY -= Input.GetAxis("Mouse Y") * rotationSpeed;
-        mouseY = Mathf.Clamp(mouseY, -45f, 45f);
+        mouseX = Mathf.Clamp(mouseX, -45f, 45f);
 
         transform.localRotation = Quaternion.Euler(0, mouseX, 0);
     }

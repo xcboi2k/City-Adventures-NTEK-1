@@ -20,7 +20,7 @@ public class CharacterColScript : MonoBehaviour
         if (Col.gameObject.tag == "Finish Point")
         {
             playerCharacterAudio.PlayOneShot(finishPointClip);
-            GameObject.Find("Game Controller").GetComponent<GameControllerScript>().isGameFinished = true;
+            GameObject.Find("Game Controller").GetComponent<GameControllerScript>().stopCountingScore = true;
             Debug.Log("You reached Point B.");
         }
 

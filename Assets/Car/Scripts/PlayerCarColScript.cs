@@ -25,7 +25,7 @@ public class PlayerCarColScript : MonoBehaviour
         if (Col.gameObject.tag == "Finish Point")
         {
             playerCarAudio.PlayOneShot(finishPointClip);
-            GameObject.Find("Game Controller").GetComponent<GameControllerScript>().isGameFinished = true;
+            GameObject.Find("Game Controller").GetComponent<GameControllerScript>().stopCountingScore = true;
             Debug.Log("You reached Point B.");
         }
 
