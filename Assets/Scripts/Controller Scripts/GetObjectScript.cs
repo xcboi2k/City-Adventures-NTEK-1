@@ -25,10 +25,18 @@ public class GetObjectScript : MonoBehaviour
     [Header("Car Levels")]
     public GameObject[] carLevels;
 
+    public bool loadPlayer;
+
     void Start()
     {
-        GetMode();
+        loadPlayer = false;
         GetLevel();
+    }
+
+    private void Update() {
+        if(loadPlayer == true){
+            GetMode();
+        }
     }
 
     public void GetMode(){
@@ -54,7 +62,7 @@ public class GetObjectScript : MonoBehaviour
 
     public void GetLevel(){
         int getMode = PlayerPrefs.GetInt(selectedMode);
-        int getLevel = PlayerPrefs. GetInt(selectedLevel);
+        int getLevel = PlayerPrefs.GetInt(selectedLevel);
 
         if(getMode == 1){
             switch (getLevel)

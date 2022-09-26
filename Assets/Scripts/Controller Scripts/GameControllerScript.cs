@@ -8,6 +8,8 @@ public class GameControllerScript : MonoBehaviour
 {
     private const string selectedLevel = "Selected Level";
 
+    public GameObject defaultCamera;
+
     [Header("Canvas Objects")]
     public GameObject startGameCanvas; 
     public GameObject inGameCanvas; 
@@ -39,7 +41,7 @@ public class GameControllerScript : MonoBehaviour
     {
         stopCountingScore = false;
         isGameFinished = false;
-
+        defaultCamera.SetActive(true);
         startGameCanvas.SetActive(true);
         Time.timeScale = 0f;
     }
@@ -62,8 +64,9 @@ public class GameControllerScript : MonoBehaviour
     }
 
     public void StartGame(){
-        inGameCanvas.SetActive(true);
         startGameCanvas.SetActive(false);
+        inGameCanvas.SetActive(true);
+        GameObject.Find("Game Controller").GetComponent<GetObjectScript>().loadPlayer = true;
         Time.timeScale = 1f;
     }
 
@@ -141,6 +144,10 @@ public class GameControllerScript : MonoBehaviour
         coin = 0;
         ticketNum = 0;
         finishGameCanvas.SetActive(false);
+
+        int getLevel = PlayerPrefs.GetInt(selectedLevel);
+        int newLevel = getLevel++;
+        PlayerPrefs.SetInt(selectedLevel, newLevel);
 
         Time.timeScale = 1f;
         SceneManager.LoadScene("GameScene");
