@@ -15,6 +15,7 @@ TagManager:
   - NoCross
   - PlayerVehicle
   - Finish Point
+  - MapCamera
   layers:
   - Default
   - TransparentFX

@@ -38,22 +38,6 @@ public class PlayerMove : MonoBehaviour
         {
             animator.SetBool("isForward", false);
         }
-        if (Input.GetKey ("a"))
-        {
-            animator.SetBool("isLeft", true);
-        }
-        if (!Input.GetKey ("a"))
-        {
-            animator.SetBool("isLeft", false);
-        }
-        if (Input.GetKey ("d"))
-        {
-            animator.SetBool("isRight", true);
-        }
-        if (!Input.GetKey ("d"))
-        {
-            animator.SetBool("isRight", false);
-        }
         if (Input.GetKey ("s"))
         {
             animator.SetBool("isBackward", true);

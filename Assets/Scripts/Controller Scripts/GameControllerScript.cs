@@ -34,7 +34,7 @@ public class GameControllerScript : MonoBehaviour
     public bool stopCountingScore, isGameFinished;
 
     private string fsText;
-    public int finalScore;
+    public int finalScore, getLevel;
 
     // Start is called before the first frame update
     void Start()
@@ -61,11 +61,19 @@ public class GameControllerScript : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.M)){
             OpenMissionCanvas();
         }
+
+        finalLevelText.text = "Level " + getLevel++;
+        finalCoinText.text = "" + coin;
+        finalTicketText.text = "" + ticketNum;
+        finalScoreText.text = "" + (coin * 2f - ticketNum * 2f);
+        fsText = finalScoreText.text;
+        finalScore = int.Parse(fsText);
     }
 
     public void StartGame(){
         startGameCanvas.SetActive(false);
         inGameCanvas.SetActive(true);
+        defaultCamera.SetActive(false);
         GameObject.Find("Game Controller").GetComponent<GetObjectScript>().loadPlayer = true;
         Time.timeScale = 1f;
     }
@@ -133,11 +141,11 @@ public class GameControllerScript : MonoBehaviour
             default:
                 break;
         }
-        finalCoinText.text = "" + coin;
-        finalTicketText.text = "" + ticketNum;
-        finalScoreText.text = "" + (coin * 2f - ticketNum * 2f);
-        fsText = finalScoreText.text;
-        finalScore = int.Parse(fsText);
+        //finalCoinText.text = "" + coin;
+        //finalTicketText.text = "" + ticketNum;
+        //finalScoreText.text = "" + (coin * 2f - ticketNum * 2f);
+        //fsText = finalScoreText.text;
+        //finalScore = int.Parse(fsText);
     }
 
     public void NextLevel(){
@@ -146,7 +154,7 @@ public class GameControllerScript : MonoBehaviour
         finishGameCanvas.SetActive(false);
 
         int getLevel = PlayerPrefs.GetInt(selectedLevel);
-        int newLevel = getLevel++;
+        int newLevel = getLevel+1;
         PlayerPrefs.SetInt(selectedLevel, newLevel);
 
         Time.timeScale = 1f;
