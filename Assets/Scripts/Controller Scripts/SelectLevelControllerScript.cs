@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class SelectLevelControllerScript : MonoBehaviour
@@ -13,6 +14,10 @@ public class SelectLevelControllerScript : MonoBehaviour
     public GameObject kickboardLevels;
     public GameObject bikeLevels;
     public GameObject carLevels;
+
+    public GameObject loadingScreen, selectLevelScreen;
+    public Image progressSlider;
+    private float target;
 
     private void Start() {
         int getMode = PlayerPrefs.GetInt(selectedMode);
@@ -29,35 +34,61 @@ public class SelectLevelControllerScript : MonoBehaviour
         if(getMode == 4){
             carLevels.SetActive(true);
         }
-
     }
 
     public void SelectedLevel1(){
         PlayerPrefs.SetInt(selectedLevel, 1);
-        SceneManager.LoadScene("GameScene");
+        LoadScene("GameScene");
+        // SceneManager.LoadScene("GameScene");
     }
 
     public void SelectedLevel2(){
         PlayerPrefs.SetInt(selectedLevel, 2);
-        SceneManager.LoadScene("GameScene");
+        LoadScene("GameScene");
+        // SceneManager.LoadScene("GameScene");
     }
 
     public void SelectedLevel3(){
         PlayerPrefs.SetInt(selectedLevel, 3);
-        SceneManager.LoadScene("GameScene");
+        LoadScene("GameScene");
+        // SceneManager.LoadScene("GameScene");
     }
 
     public void SelectedLevel4(){
         PlayerPrefs.SetInt(selectedLevel, 4);
-        SceneManager.LoadScene("GameScene");
+        LoadScene("GameScene");
+        // SceneManager.LoadScene("GameScene");
     }
 
     public void SelectedLevel5(){
         PlayerPrefs.SetInt(selectedLevel, 5);
-        SceneManager.LoadScene("GameScene");
+        LoadScene("GameScene");
+        // SceneManager.LoadScene("GameScene");
     }
 
     public void Back(){
         SceneManager.LoadScene("SelectModeScene");
+    }
+
+    public async void LoadScene (string sceneName){
+        target = 0;
+        progressSlider.fillAmount = 0;
+        
+        var scene = SceneManager.LoadSceneAsync(sceneName);
+        scene.allowSceneActivation = false;
+
+        loadingScreen.SetActive(true);
+
+        do{
+            target = scene.progress;
+        }
+        while(scene.progress < 0.9f);
+
+        scene.allowSceneActivation = true;
+        loadingScreen.SetActive(false);
+    }
+
+    void Update(){
+        progressSlider.fillAmount = Mathf.MoveTowards(progressSlider.fillAmount, target, 3 * Time.deltaTime);
     }
 }

@@ -33,7 +33,7 @@ public class GameControllerScript : MonoBehaviour
     [HideInInspector]
     public bool stopCountingScore, isGameFinished;
 
-    private string fsText;
+    private float fs;
     public int finalScore, getLevel;
 
     // Start is called before the first frame update
@@ -51,7 +51,36 @@ public class GameControllerScript : MonoBehaviour
         ticketText.text = "" + ticketNum;
         
         if(stopCountingScore == true){
+            isGameFinished = true;
             finishGameCanvas.SetActive(true);
+
+            int getLevel = PlayerPrefs. GetInt(selectedLevel);
+            switch (getLevel)
+            {
+                case 1:
+                    finalLevelText.text = "Level 1";
+                    break;
+                case 2:
+                    finalLevelText.text = "Level 2";
+                    break;
+                case 3:
+                    finalLevelText.text = "Level 3";
+                    break;
+                case 4:
+                    finalLevelText.text = "Level 4";
+                    break;
+                case 5:
+                    finalLevelText.text = "Level 5";
+                    break;
+                default:
+                    break;
+            }
+            
+            fs = coin * 2f - ticketNum * 2f;
+            finalScore = (int)fs;
+            finalCoinText.text = "" + coin;
+            finalTicketText.text = "" + ticketNum;
+            finalScoreText.text = "" + finalScore;
         }
 
         if(Input.GetKeyDown(KeyCode.Escape)){
@@ -61,13 +90,8 @@ public class GameControllerScript : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.M)){
             OpenMissionCanvas();
         }
-
-        finalLevelText.text = "Level " + getLevel++;
-        finalCoinText.text = "" + coin;
-        finalTicketText.text = "" + ticketNum;
-        finalScoreText.text = "" + (coin * 2f - ticketNum * 2f);
-        fsText = finalScoreText.text;
-        finalScore = int.Parse(fsText);
+        // fsText = finalScoreText.text;
+        // finalScore = int.Parse(fsText);
     }
 
     public void StartGame(){
@@ -119,33 +143,6 @@ public class GameControllerScript : MonoBehaviour
         inGameCanvas.SetActive(false);
         finishGameCanvas.SetActive(true);
         Time.timeScale = 0f;
-
-        int getLevel = PlayerPrefs. GetInt(selectedLevel);
-        switch (getLevel)
-        {
-            case 1:
-                finalLevelText.text = "Level 1";
-                break;
-            case 2:
-                finalLevelText.text = "Level 2";
-                break;
-            case 3:
-                finalLevelText.text = "Level 3";
-                break;
-            case 4:
-                finalLevelText.text = "Level 4";
-                break;
-            case 5:
-                finalLevelText.text = "Level 5";
-                break;
-            default:
-                break;
-        }
-        //finalCoinText.text = "" + coin;
-        //finalTicketText.text = "" + ticketNum;
-        //finalScoreText.text = "" + (coin * 2f - ticketNum * 2f);
-        //fsText = finalScoreText.text;
-        //finalScore = int.Parse(fsText);
     }
 
     public void NextLevel(){
