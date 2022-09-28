@@ -32,11 +32,12 @@ public class SaveHighScoreScript : MonoBehaviour
     private const string carLevel5Gold = "Car Level 5 Gold", carLevel5Silver = "Car Level 5 Silver", carLevel5Bronze = "Car Level 5 Bronze";
 
     private int finalScore;
+
     void Update()
     {
         if(GameObject.Find("Game Controller").GetComponent<GameControllerScript>().isGameFinished == true){
             int getMode = PlayerPrefs.GetInt(selectedMode);
-            int getLevel = PlayerPrefs. GetInt(selectedLevel);
+            int getLevel = PlayerPrefs.GetInt(selectedLevel);
 
             int getWalk1G = PlayerPrefs.GetInt(walkLevel1Gold);
             int getWalk1S = PlayerPrefs.GetInt(walkLevel1Silver);
@@ -108,57 +109,107 @@ public class SaveHighScoreScript : MonoBehaviour
                 switch (getLevel)
                 {
                     case 1:
-                        if(getWalk1G < finalScore || getWalk1G == 0){
-                            PlayerPrefs.SetInt(walkLevel1Gold, finalScore);
+                        if(getWalk1B < finalScore){
+                            if(getWalk1S < finalScore){
+                                if(getWalk1G <= finalScore){
+                                    PlayerPrefs.SetInt(walkLevel1Gold, finalScore);
+                                }
+                                else if(getWalk1G > finalScore){
+                                    PlayerPrefs.SetInt(walkLevel1Silver, finalScore);
+                                }
+                            }
+                            else if (getWalk1S == finalScore){
+                                PlayerPrefs.SetInt(walkLevel1Silver, finalScore);
+                            }
+                            else if (getWalk1S > finalScore){
+                                PlayerPrefs.SetInt(walkLevel1Bronze, finalScore);
+                            }
                         }
-                        else if(getWalk1S < finalScore){
-                            PlayerPrefs.SetInt(walkLevel1Silver, finalScore);
-                        }
-                        else if(getWalk1B < finalScore){
+                        else if (getWalk1B == finalScore){
                             PlayerPrefs.SetInt(walkLevel1Bronze, finalScore);
                         }
                         break;
                     case 2:
-                        if(getWalk2G < finalScore){
-                            PlayerPrefs.SetInt(walkLevel2Gold, finalScore);
+                        if(getWalk2B < finalScore){
+                            if(getWalk2S < finalScore){
+                                if(getWalk2G <= finalScore){
+                                    PlayerPrefs.SetInt(walkLevel2Gold, finalScore);
+                                }
+                                else if(getWalk2G > finalScore){
+                                    PlayerPrefs.SetInt(walkLevel2Silver, finalScore);
+                                }
+                            }
+                            else if (getWalk2S == finalScore){
+                                PlayerPrefs.SetInt(walkLevel2Silver, finalScore);
+                            }
+                            else if (getWalk2S > finalScore){
+                                PlayerPrefs.SetInt(walkLevel2Bronze, finalScore);
+                            }
                         }
-                        else if(getWalk2S < finalScore){
-                            PlayerPrefs.SetInt(walkLevel2Silver, finalScore);
-                        }
-                        else if(getWalk2B < finalScore){
+                        else if (getWalk2B == finalScore){
                             PlayerPrefs.SetInt(walkLevel2Bronze, finalScore);
                         }
                         break;
                     case 3:
-                        if(getWalk3G < finalScore){
-                            PlayerPrefs.SetInt(walkLevel3Gold, finalScore);
+                        if(getWalk3B < finalScore){
+                            if(getWalk3S < finalScore){
+                                if(getWalk3G <= finalScore){
+                                    PlayerPrefs.SetInt(walkLevel3Gold, finalScore);
+                                }
+                                else if(getWalk3G > finalScore){
+                                    PlayerPrefs.SetInt(walkLevel3Silver, finalScore);
+                                }
+                            }
+                            else if (getWalk3S == finalScore){
+                                PlayerPrefs.SetInt(walkLevel3Silver, finalScore);
+                            }
+                            else if (getWalk3S > finalScore){
+                                PlayerPrefs.SetInt(walkLevel3Bronze, finalScore);
+                            }
                         }
-                        else if(getWalk3S < finalScore){
-                            PlayerPrefs.SetInt(walkLevel3Silver, finalScore);
-                        }
-                        else if(getWalk3B < finalScore){
+                        else if (getWalk3B == finalScore){
                             PlayerPrefs.SetInt(walkLevel3Bronze, finalScore);
                         }
                         break;
                     case 4:
-                        if(getWalk4G < finalScore){
-                            PlayerPrefs.SetInt(walkLevel4Gold, finalScore);
+                        if(getWalk4B < finalScore){
+                            if(getWalk4S < finalScore){
+                                if(getWalk4G <= finalScore){
+                                    PlayerPrefs.SetInt(walkLevel4Gold, finalScore);
+                                }
+                                else if(getWalk4G > finalScore){
+                                    PlayerPrefs.SetInt(walkLevel4Silver, finalScore);
+                                }
+                            }
+                            else if (getWalk4S == finalScore){
+                                PlayerPrefs.SetInt(walkLevel4Silver, finalScore);
+                            }
+                            else if (getWalk4S > finalScore){
+                                PlayerPrefs.SetInt(walkLevel4Bronze, finalScore);
+                            }
                         }
-                        else if(getWalk4S < finalScore){
-                            PlayerPrefs.SetInt(walkLevel4Silver, finalScore);
-                        }
-                        else if(getWalk4B < finalScore){
+                        else if (getWalk4B == finalScore){
                             PlayerPrefs.SetInt(walkLevel4Bronze, finalScore);
                         }
                         break;
                     case 5:
-                        if(getWalk5G < finalScore){
-                            PlayerPrefs.SetInt(walkLevel5Gold, finalScore);
+                        if(getWalk5B < finalScore){
+                            if(getWalk5S < finalScore){
+                                if(getWalk5G <= finalScore){
+                                    PlayerPrefs.SetInt(walkLevel5Gold, finalScore);
+                                }
+                                else if(getWalk5G > finalScore){
+                                    PlayerPrefs.SetInt(walkLevel5Silver, finalScore);
+                                }
+                            }
+                            else if (getWalk5S == finalScore){
+                                PlayerPrefs.SetInt(walkLevel5Silver, finalScore);
+                            }
+                            else if (getWalk5S > finalScore){
+                                PlayerPrefs.SetInt(walkLevel5Bronze, finalScore);
+                            }
                         }
-                        else if(getWalk5S < finalScore){
-                            PlayerPrefs.SetInt(walkLevel5Silver, finalScore);
-                        }
-                        else if(getWalk5B < finalScore){
+                        else if (getWalk5B == finalScore){
                             PlayerPrefs.SetInt(walkLevel5Bronze, finalScore);
                         }
                         break;
@@ -171,57 +222,107 @@ public class SaveHighScoreScript : MonoBehaviour
                 switch (getLevel)
                 {
                     case 1:
-                        if(getKickboard1G < finalScore){
-                            PlayerPrefs.SetInt(kickboardLevel1Gold, finalScore);
+                        if(getKickboard1B < finalScore){
+                            if(getKickboard1S < finalScore){
+                                if(getKickboard1G <= finalScore){
+                                    PlayerPrefs.SetInt(kickboardLevel1Gold, finalScore);
+                                }
+                                else if(getKickboard1G > finalScore){
+                                    PlayerPrefs.SetInt(kickboardLevel1Silver, finalScore);
+                                }
+                            }
+                            else if (getKickboard1S == finalScore){
+                                PlayerPrefs.SetInt(kickboardLevel1Silver, finalScore);
+                            }
+                            else if (getKickboard1S > finalScore){
+                                PlayerPrefs.SetInt(kickboardLevel1Bronze, finalScore);
+                            }
                         }
-                        else if(getKickboard1S < finalScore){
-                            PlayerPrefs.SetInt(kickboardLevel1Silver, finalScore);
-                        }
-                        else if(getKickboard1B < finalScore){
+                        else if (getKickboard1B == finalScore){
                             PlayerPrefs.SetInt(kickboardLevel1Bronze, finalScore);
                         }
                         break;
                     case 2:
-                        if(getKickboard2G < finalScore){
-                            PlayerPrefs.SetInt(kickboardLevel2Gold, finalScore);
+                        if(getKickboard2B < finalScore){
+                            if(getKickboard2S < finalScore){
+                                if(getKickboard2G <= finalScore){
+                                    PlayerPrefs.SetInt(kickboardLevel2Gold, finalScore);
+                                }
+                                else if(getKickboard2G > finalScore){
+                                    PlayerPrefs.SetInt(kickboardLevel2Silver, finalScore);
+                                }
+                            }
+                            else if (getKickboard2S == finalScore){
+                                PlayerPrefs.SetInt(kickboardLevel2Silver, finalScore);
+                            }
+                            else if (getKickboard2S > finalScore){
+                                PlayerPrefs.SetInt(kickboardLevel2Bronze, finalScore);
+                            }
                         }
-                        else if(getKickboard2S < finalScore){
-                            PlayerPrefs.SetInt(kickboardLevel1Silver, finalScore);
-                        }
-                        else if(getKickboard2B < finalScore){
+                        else if (getKickboard2B == finalScore){
                             PlayerPrefs.SetInt(kickboardLevel2Bronze, finalScore);
                         }
                         break;
                     case 3:
-                        if(getKickboard3G < finalScore){
-                            PlayerPrefs.SetInt(kickboardLevel3Gold, finalScore);
+                        if(getKickboard3B < finalScore){
+                            if(getKickboard3S < finalScore){
+                                if(getKickboard3G <= finalScore){
+                                    PlayerPrefs.SetInt(kickboardLevel3Gold, finalScore);
+                                }
+                                else if(getKickboard3G > finalScore){
+                                    PlayerPrefs.SetInt(kickboardLevel3Silver, finalScore);
+                                }
+                            }
+                            else if (getKickboard3S == finalScore){
+                                PlayerPrefs.SetInt(kickboardLevel3Silver, finalScore);
+                            }
+                            else if (getKickboard3S > finalScore){
+                                PlayerPrefs.SetInt(kickboardLevel3Bronze, finalScore);
+                            }
                         }
-                        else if(getKickboard3S < finalScore){
-                            PlayerPrefs.SetInt(kickboardLevel3Silver, finalScore);
-                        }
-                        else if(getKickboard3B < finalScore){
+                        else if (getKickboard3B == finalScore){
                             PlayerPrefs.SetInt(kickboardLevel3Bronze, finalScore);
                         }
                         break;
                     case 4:
-                        if(getKickboard4G < finalScore){
-                            PlayerPrefs.SetInt(kickboardLevel4Gold, finalScore);
+                        if(getKickboard4B < finalScore){
+                            if(getKickboard4S < finalScore){
+                                if(getKickboard4G <= finalScore){
+                                    PlayerPrefs.SetInt(kickboardLevel4Gold, finalScore);
+                                }
+                                else if(getKickboard4G > finalScore){
+                                    PlayerPrefs.SetInt(kickboardLevel4Silver, finalScore);
+                                }
+                            }
+                            else if (getKickboard4S == finalScore){
+                                PlayerPrefs.SetInt(kickboardLevel4Silver, finalScore);
+                            }
+                            else if (getKickboard4S > finalScore){
+                                PlayerPrefs.SetInt(kickboardLevel4Bronze, finalScore);
+                            }
                         }
-                        else if(getKickboard4S < finalScore){
-                            PlayerPrefs.SetInt(kickboardLevel4Silver, finalScore);
-                        }
-                        else if(getKickboard4B < finalScore){
+                        else if (getKickboard4B == finalScore){
                             PlayerPrefs.SetInt(kickboardLevel4Bronze, finalScore);
                         }
                         break;
                     case 5:
-                        if(getKickboard5G < finalScore){
-                            PlayerPrefs.SetInt(kickboardLevel5Gold, finalScore);
+                        if(getKickboard5B < finalScore){
+                            if(getKickboard5S < finalScore){
+                                if(getKickboard5G <= finalScore){
+                                    PlayerPrefs.SetInt(kickboardLevel5Gold, finalScore);
+                                }
+                                else if(getKickboard5G > finalScore){
+                                    PlayerPrefs.SetInt(kickboardLevel5Silver, finalScore);
+                                }
+                            }
+                            else if (getKickboard5S == finalScore){
+                                PlayerPrefs.SetInt(kickboardLevel5Silver, finalScore);
+                            }
+                            else if (getKickboard5S > finalScore){
+                                PlayerPrefs.SetInt(kickboardLevel5Bronze, finalScore);
+                            }
                         }
-                        else if(getKickboard5S < finalScore){
-                            PlayerPrefs.SetInt(kickboardLevel5Silver, finalScore);
-                        }
-                        else if(getKickboard5B < finalScore){
+                        else if (getKickboard5B == finalScore){
                             PlayerPrefs.SetInt(kickboardLevel5Bronze, finalScore);
                         }
                         break;
@@ -234,57 +335,107 @@ public class SaveHighScoreScript : MonoBehaviour
                 switch (getLevel)
                 {
                     case 1:
-                        if(getBike1G < finalScore){
-                            PlayerPrefs.SetInt(bikeLevel1Gold, finalScore);
+                        if(getBike1B < finalScore){
+                            if(getBike1S < finalScore){
+                                if(getBike1G <= finalScore){
+                                    PlayerPrefs.SetInt(bikeLevel1Gold, finalScore);
+                                }
+                                else if(getBike1G > finalScore){
+                                    PlayerPrefs.SetInt(bikeLevel1Silver, finalScore);
+                                }
+                            }
+                            else if (getBike1S == finalScore){
+                                PlayerPrefs.SetInt(bikeLevel1Silver, finalScore);
+                            }
+                            else if (getBike1S > finalScore){
+                                PlayerPrefs.SetInt(bikeLevel1Bronze, finalScore);
+                            }
                         }
-                        else if(getBike1S < finalScore){
-                            PlayerPrefs.SetInt(bikeLevel1Silver, finalScore);
-                        }
-                        else if(getBike1B < finalScore){
+                        else if (getBike1B == finalScore){
                             PlayerPrefs.SetInt(bikeLevel1Bronze, finalScore);
                         }
                         break;
                     case 2:
-                        if(getBike2G < finalScore){
-                            PlayerPrefs.SetInt(bikeLevel2Gold, finalScore);
+                        if(getBike2B < finalScore){
+                            if(getBike2S < finalScore){
+                                if(getBike2G <= finalScore){
+                                    PlayerPrefs.SetInt(bikeLevel2Gold, finalScore);
+                                }
+                                else if(getBike2G > finalScore){
+                                    PlayerPrefs.SetInt(bikeLevel2Silver, finalScore);
+                                }
+                            }
+                            else if (getBike2S == finalScore){
+                                PlayerPrefs.SetInt(bikeLevel2Silver, finalScore);
+                            }
+                            else if (getBike2S > finalScore){
+                                PlayerPrefs.SetInt(bikeLevel2Bronze, finalScore);
+                            }
                         }
-                        else if(getBike2S < finalScore){
-                            PlayerPrefs.SetInt(bikeLevel2Silver, finalScore);
-                        }
-                        else if(getBike2B < finalScore){
+                        else if (getBike2B == finalScore){
                             PlayerPrefs.SetInt(bikeLevel2Bronze, finalScore);
                         }
                         break;
                     case 3:
-                        if(getBike3G < finalScore){
-                            PlayerPrefs.SetInt(bikeLevel3Gold, finalScore);
+                        if(getBike3B < finalScore){
+                            if(getBike3S < finalScore){
+                                if(getBike3G <= finalScore){
+                                    PlayerPrefs.SetInt(bikeLevel3Gold, finalScore);
+                                }
+                                else if(getBike3G > finalScore){
+                                    PlayerPrefs.SetInt(bikeLevel3Silver, finalScore);
+                                }
+                            }
+                            else if (getBike3S == finalScore){
+                                PlayerPrefs.SetInt(bikeLevel3Silver, finalScore);
+                            }
+                            else if (getBike3S > finalScore){
+                                PlayerPrefs.SetInt(bikeLevel3Bronze, finalScore);
+                            }
                         }
-                        else if(getBike3S < finalScore){
-                            PlayerPrefs.SetInt(bikeLevel3Silver, finalScore);
-                        }
-                        else if(getBike3B < finalScore){
+                        else if (getBike3B == finalScore){
                             PlayerPrefs.SetInt(bikeLevel3Bronze, finalScore);
                         }
                         break;
                     case 4:
-                        if(getBike4G < finalScore){
-                            PlayerPrefs.SetInt(bikeLevel4Gold, finalScore);
+                        if(getBike4B < finalScore){
+                            if(getBike4S < finalScore){
+                                if(getBike4G <= finalScore){
+                                    PlayerPrefs.SetInt(bikeLevel4Gold, finalScore);
+                                }
+                                else if(getBike4G > finalScore){
+                                    PlayerPrefs.SetInt(bikeLevel4Silver, finalScore);
+                                }
+                            }
+                            else if (getBike4S == finalScore){
+                                PlayerPrefs.SetInt(bikeLevel4Silver, finalScore);
+                            }
+                            else if (getBike4S > finalScore){
+                                PlayerPrefs.SetInt(bikeLevel4Bronze, finalScore);
+                            }
                         }
-                        else if(getBike4S < finalScore){
-                            PlayerPrefs.SetInt(bikeLevel4Silver, finalScore);
-                        }
-                        else if(getBike4B < finalScore){
+                        else if (getBike4B == finalScore){
                             PlayerPrefs.SetInt(bikeLevel4Bronze, finalScore);
                         }
                         break;
                     case 5:
-                        if(getBike5G < finalScore){
-                            PlayerPrefs.SetInt(bikeLevel5Gold, finalScore);
+                        if(getBike5B < finalScore){
+                            if(getBike5S < finalScore){
+                                if(getBike5G <= finalScore){
+                                    PlayerPrefs.SetInt(bikeLevel5Gold, finalScore);
+                                }
+                                else if(getBike5G > finalScore){
+                                    PlayerPrefs.SetInt(bikeLevel5Silver, finalScore);
+                                }
+                            }
+                            else if (getBike5S == finalScore){
+                                PlayerPrefs.SetInt(bikeLevel5Silver, finalScore);
+                            }
+                            else if (getBike5S > finalScore){
+                                PlayerPrefs.SetInt(bikeLevel5Bronze, finalScore);
+                            }
                         }
-                        else if(getBike5S < finalScore){
-                            PlayerPrefs.SetInt(bikeLevel5Silver, finalScore);
-                        }
-                        else if(getBike5B < finalScore){
+                        else if (getBike5B == finalScore){
                             PlayerPrefs.SetInt(bikeLevel5Bronze, finalScore);
                         }
                         break;
@@ -297,57 +448,107 @@ public class SaveHighScoreScript : MonoBehaviour
                 switch (getLevel)
                 {
                     case 1:
-                        if(getCar1G < finalScore){
-                            PlayerPrefs.SetInt(carLevel1Gold, finalScore);
+                        if(getCar1B < finalScore){
+                            if(getCar1S < finalScore){
+                                if(getCar1G <= finalScore){
+                                    PlayerPrefs.SetInt(carLevel1Gold, finalScore);
+                                }
+                                else if(getCar1G > finalScore){
+                                    PlayerPrefs.SetInt(carLevel1Silver, finalScore);
+                                }
+                            }
+                            else if (getCar1S == finalScore){
+                                PlayerPrefs.SetInt(carLevel1Silver, finalScore);
+                            }
+                            else if (getCar1S > finalScore){
+                                PlayerPrefs.SetInt(carLevel1Bronze, finalScore);
+                            }
                         }
-                        else if(getCar1S < finalScore){
-                            PlayerPrefs.SetInt(carLevel1Silver, finalScore);
-                        }
-                        else if(getCar1B < finalScore){
+                        else if (getCar1B == finalScore){
                             PlayerPrefs.SetInt(carLevel1Bronze, finalScore);
                         }
                         break;
                     case 2:
-                        if(getCar2G < finalScore){
-                            PlayerPrefs.SetInt(carLevel2Gold, finalScore);
+                        if(getCar2B < finalScore){
+                            if(getCar2S < finalScore){
+                                if(getCar2G <= finalScore){
+                                    PlayerPrefs.SetInt(carLevel2Gold, finalScore);
+                                }
+                                else if(getCar2G > finalScore){
+                                    PlayerPrefs.SetInt(carLevel2Silver, finalScore);
+                                }
+                            }
+                            else if (getCar2S == finalScore){
+                                PlayerPrefs.SetInt(carLevel2Silver, finalScore);
+                            }
+                            else if (getCar2S > finalScore){
+                                PlayerPrefs.SetInt(carLevel2Bronze, finalScore);
+                            }
                         }
-                        else if(getCar2S < finalScore){
-                            PlayerPrefs.SetInt(carLevel2Silver, finalScore);
-                        }
-                        else if(getCar2B < finalScore){
+                        else if (getCar2B == finalScore){
                             PlayerPrefs.SetInt(carLevel2Bronze, finalScore);
                         }
                         break;
                     case 3:
-                        if(getCar3G < finalScore){
-                            PlayerPrefs.SetInt(carLevel3Gold, finalScore);
+                        if(getCar3B < finalScore){
+                            if(getCar3S < finalScore){
+                                if(getCar3G <= finalScore){
+                                    PlayerPrefs.SetInt(carLevel3Gold, finalScore);
+                                }
+                                else if(getCar3G > finalScore){
+                                    PlayerPrefs.SetInt(carLevel3Silver, finalScore);
+                                }
+                            }
+                            else if (getCar3S == finalScore){
+                                PlayerPrefs.SetInt(carLevel3Silver, finalScore);
+                            }
+                            else if (getCar3S > finalScore){
+                                PlayerPrefs.SetInt(carLevel3Bronze, finalScore);
+                            }
                         }
-                        else if(getCar3S < finalScore){
-                            PlayerPrefs.SetInt(carLevel3Silver, finalScore);
-                        }
-                        else if(getCar3B < finalScore){
+                        else if (getCar3B == finalScore){
                             PlayerPrefs.SetInt(carLevel3Bronze, finalScore);
                         }
                         break;
                     case 4:
-                        if(getCar4G < finalScore){
-                            PlayerPrefs.SetInt(carLevel4Gold, finalScore);
+                        if(getCar4B < finalScore){
+                            if(getCar4S < finalScore){
+                                if(getCar4G <= finalScore){
+                                    PlayerPrefs.SetInt(carLevel4Gold, finalScore);
+                                }
+                                else if(getCar4G > finalScore){
+                                    PlayerPrefs.SetInt(carLevel4Silver, finalScore);
+                                }
+                            }
+                            else if (getCar4S == finalScore){
+                                PlayerPrefs.SetInt(carLevel4Silver, finalScore);
+                            }
+                            else if (getCar4S > finalScore){
+                                PlayerPrefs.SetInt(carLevel4Bronze, finalScore);
+                            }
                         }
-                        else if(getCar4S < finalScore){
-                            PlayerPrefs.SetInt(carLevel4Silver, finalScore);
-                        }
-                        else if(getCar4B < finalScore){
+                        else if (getCar4B == finalScore){
                             PlayerPrefs.SetInt(carLevel4Bronze, finalScore);
                         }
                         break;
                     case 5:
-                        if(getCar5G < finalScore){
-                            PlayerPrefs.SetInt(carLevel5Gold, finalScore);
+                        if(getCar5B < finalScore){
+                            if(getCar5S < finalScore){
+                                if(getCar5G <= finalScore){
+                                    PlayerPrefs.SetInt(carLevel5Gold, finalScore);
+                                }
+                                else if(getCar5G > finalScore){
+                                    PlayerPrefs.SetInt(carLevel5Silver, finalScore);
+                                }
+                            }
+                            else if (getCar5S == finalScore){
+                                PlayerPrefs.SetInt(carLevel5Silver, finalScore);
+                            }
+                            else if (getCar5S > finalScore){
+                                PlayerPrefs.SetInt(carLevel5Bronze, finalScore);
+                            }
                         }
-                        else if(getCar5S < finalScore){
-                            PlayerPrefs.SetInt(carLevel5Silver, finalScore);
-                        }
-                        else if(getCar5B < finalScore){
+                        else if (getCar5B == finalScore){
                             PlayerPrefs.SetInt(carLevel5Bronze, finalScore);
                         }
                         break;

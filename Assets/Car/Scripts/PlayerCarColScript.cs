@@ -11,11 +11,13 @@ public class PlayerCarColScript : MonoBehaviour
         if (Col.gameObject.tag == "Gib"){
             GameObject.Find("Game Controller").GetComponent<GameControllerScript>().ticketNum += 1;
             Debug.Log("Look at other vehicles.");
+            GameObject.Find("Game Controller").GetComponent<GameControllerScript>().isPlayerAccident = true;
         }
 
         if (Col.gameObject.tag == "Unit"){
             GameObject.Find("Game Controller").GetComponent<GameControllerScript>().ticketNum += 1;
             Debug.Log("Watch out on pedestrians.");
+            GameObject.Find("Game Controller").GetComponent<GameControllerScript>().isPlayerAccident = true;
         }
     }
 

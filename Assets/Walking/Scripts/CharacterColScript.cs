@@ -9,6 +9,7 @@ public class CharacterColScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision Col) {
         if (Col.gameObject.tag == "Gib"){
+            GameObject.Find("Game Controller").GetComponent<GameControllerScript>().isPlayerAccident = true;
             GameObject.Find("Game Controller").GetComponent<GameControllerScript>().ticketNum += 1;
             Debug.Log("Look at incoming vehicles.");
         }

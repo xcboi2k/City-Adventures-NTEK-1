@@ -16,6 +16,7 @@ public class GameControllerScript : MonoBehaviour
     public GameObject missionCanvas;
     public GameObject pauseMenuCanvas;
     public GameObject finishGameCanvas;
+    public GameObject deathCanvas;
 
     [Header("In Game Objects")]
     public Text coinText;
@@ -31,7 +32,7 @@ public class GameControllerScript : MonoBehaviour
     [HideInInspector]
     public int coin, ticketNum;
     [HideInInspector]
-    public bool stopCountingScore, isGameFinished;
+    public bool stopCountingScore, isGameFinished, isPlayerAccident;
 
     private float fs;
     public int finalScore, getLevel;
@@ -49,10 +50,16 @@ public class GameControllerScript : MonoBehaviour
     void Update(){
         coinText.text = "" + coin;
         ticketText.text = "" + ticketNum;
+
+        if(isPlayerAccident == true){
+            OpenDeathCanvas();
+            Time.timeScale = 0f;
+        }
         
         if(stopCountingScore == true){
             isGameFinished = true;
             finishGameCanvas.SetActive(true);
+            Time.timeScale = 0f;
 
             int getLevel = PlayerPrefs. GetInt(selectedLevel);
             switch (getLevel)
@@ -156,6 +163,14 @@ public class GameControllerScript : MonoBehaviour
 
         Time.timeScale = 1f;
         SceneManager.LoadScene("GameScene");
+    }
+
+    //ACCIDENT
+    public void OpenDeathCanvas()
+    {
+        inGameCanvas.SetActive(false);
+        deathCanvas.SetActive(true);
+        Time.timeScale = 0f;
     }
 
 }
