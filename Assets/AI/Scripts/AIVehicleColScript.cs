@@ -5,10 +5,8 @@ using UnityEngine;
 public class AIVehicleColScript : MonoBehaviour
 {
     private void OnCollisionEnter(Collision Col) {
-        if (Col.gameObject.tag == "Gib"){
-            Destroy(Col.gameObject);
-            Destroy(gameObject);
-            Debug.Log("AI Vehicle Accident.");
+        if (Col.gameObject.tag == "Player"){
+            GameObject.Find("Game Controller").GetComponent<GameControllerScript>().isPlayerAccident = true;
         }
 
         if (Col.gameObject.tag == "Unit"){

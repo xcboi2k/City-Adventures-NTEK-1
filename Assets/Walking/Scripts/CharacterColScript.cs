@@ -1,17 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterColScript : MonoBehaviour
 {
     public AudioSource playerCharacterAudio;
     public AudioClip coinClip, finishPointClip;
+    public Text reminderText;
 
     private void OnCollisionEnter(Collision Col) {
         if (Col.gameObject.tag == "Gib"){
-            GameObject.Find("Game Controller").GetComponent<GameControllerScript>().isPlayerAccident = true;
             GameObject.Find("Game Controller").GetComponent<GameControllerScript>().ticketNum += 1;
-            Debug.Log("Look at incoming vehicles.");
         }
     }
 
@@ -22,24 +22,22 @@ public class CharacterColScript : MonoBehaviour
         {
             playerCharacterAudio.PlayOneShot(finishPointClip);
             GameObject.Find("Game Controller").GetComponent<GameControllerScript>().stopCountingScore = true;
-            Debug.Log("You reached Point B.");
         }
 
         if(Col.gameObject.tag == "Coin"){
             playerCharacterAudio.PlayOneShot(coinClip);
             GameObject.Find("Game Controller").GetComponent<GameControllerScript>().coin += 10;
             Destroy(Col.gameObject);
-            Debug.Log("Coin added to score.");
         }
 
         if(Col.gameObject.tag == "Road"){
             GameObject.Find("Game Controller").GetComponent<GameControllerScript>().ticketNum += 1;
-            Debug.Log("Why are you on the road?");
+            reminderText.text = "You can only cross the road by using the pedestrian crossing.";
         }
 
         if(Col.gameObject.tag == "NoCross"){
             GameObject.Find("Game Controller").GetComponent<GameControllerScript>().ticketNum += 1;
-            Debug.Log("No Jaywalking");
+            reminderText.text = "Crossing the road while the light is green is jaywalking.";
         }
     }  
 }
