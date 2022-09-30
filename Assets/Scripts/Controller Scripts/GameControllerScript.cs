@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameControllerScript : MonoBehaviour
 {
     private const string selectedLevel = "Selected Level";
+    private const string selectedMode = "Selected Mode";
 
     public GameObject defaultCamera;
 
@@ -21,6 +22,10 @@ public class GameControllerScript : MonoBehaviour
     [Header("In Game Objects")]
     public Text coinText;
     public Text ticketText;
+    public GameObject walkMap;
+    public GameObject kbMap;
+    public GameObject bikeMap;
+    public GameObject carMap;
 
     [Header("Finish Game Objects")]
     public Text finalLevelText;
@@ -30,12 +35,11 @@ public class GameControllerScript : MonoBehaviour
     public Text levelText;
 
     [HideInInspector]
-    public int coin, ticketNum;
+    public int coin, ticketNum, finalScore, getLevel;
     [HideInInspector]
     public bool stopCountingScore, isGameFinished, isPlayerAccident;
-
+    [HideInInspector]
     private float fs;
-    public int finalScore, getLevel;
 
     // Start is called before the first frame update
     void Start()
@@ -97,16 +101,37 @@ public class GameControllerScript : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.M)){
             OpenMissionCanvas();
         }
-        // fsText = finalScoreText.text;
-        // finalScore = int.Parse(fsText);
     }
 
+    // START UI
     public void StartGame(){
         startGameCanvas.SetActive(false);
         inGameCanvas.SetActive(true);
         defaultCamera.SetActive(false);
         GameObject.Find("Game Controller").GetComponent<GetObjectScript>().loadPlayer = true;
         Time.timeScale = 1f;
+    }
+
+    // INGAME UI
+    public void GetMap(){
+        int getMode = PlayerPrefs.GetInt(selectedMode);
+        switch (getMode)
+        {
+            case 1:
+                walkMap.SetActive(true);
+                break;
+            case 2:
+                kbMap.SetActive(true);
+                break;
+            case 3:
+                bikeMap.SetActive(true);
+                break;
+            case 4:
+                carMap.SetActive(true);
+                break;
+            default:
+                break;
+        }
     }
 
     // PAUSE MENU
