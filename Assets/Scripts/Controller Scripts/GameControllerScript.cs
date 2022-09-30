@@ -26,6 +26,10 @@ public class GameControllerScript : MonoBehaviour
     public GameObject kbMap;
     public GameObject bikeMap;
     public GameObject carMap;
+    public GameObject walkMiniCam;
+    public GameObject kbMiniCam;
+    public GameObject bikeMiniCam;
+    public GameObject carMiniCam;
 
     [Header("Finish Game Objects")]
     public Text finalLevelText;
@@ -44,11 +48,13 @@ public class GameControllerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GetMap();
         stopCountingScore = false;
         isGameFinished = false;
         defaultCamera.SetActive(true);
         startGameCanvas.SetActive(true);
         Time.timeScale = 0f;
+        
     }
 
     void Update(){
@@ -92,6 +98,7 @@ public class GameControllerScript : MonoBehaviour
             finalCoinText.text = "" + coin;
             finalTicketText.text = "" + ticketNum;
             finalScoreText.text = "" + finalScore;
+
         }
 
         if(Input.GetKeyDown(KeyCode.Escape)){
@@ -119,15 +126,19 @@ public class GameControllerScript : MonoBehaviour
         {
             case 1:
                 walkMap.SetActive(true);
+                walkMiniCam.SetActive(true);
                 break;
             case 2:
                 kbMap.SetActive(true);
+                kbMiniCam.SetActive(true);
                 break;
             case 3:
                 bikeMap.SetActive(true);
+                bikeMiniCam.SetActive(true);
                 break;
             case 4:
                 carMap.SetActive(true);
+                carMiniCam.SetActive(true);
                 break;
             default:
                 break;
