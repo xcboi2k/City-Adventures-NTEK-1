@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class GetScoreScript : MonoBehaviour
 {
     public Text goldScoreText, silverScoreText, bronzeScoreText;
     private string gold, silver, bronze;
 
-    private List<HighScoreEntry> highScoreEntryList;
+    private List<HighScoreEntry> highScoreEntryList = new List<HighScoreEntry>();
+    private List<HighScoreEntry> highScoreEntryListOrder = new List<HighScoreEntry>();
 
     private void Awake(){
         highScoreEntryList = new List<HighScoreEntry>(){
@@ -17,20 +19,13 @@ public class GetScoreScript : MonoBehaviour
             new HighScoreEntry{score = 320},
         };
 
-        for (int i = 0; i < highScoreEntryList.Count; i++){
-            for (int j = i + 1; j < highScoreEntryList.Count; j++){
-                if(highScoreEntryList[j].score > highScoreEntryList[i].score){
-                    HighScoreEntry tmp = highScoreEntryList[i];
-                    highScoreEntryList[i] = highScoreEntryList[j];
-                    highScoreEntryList[j] = tmp;
-                }
-            }
-        }
+        highScoreEntryListOrder  = highScoreEntryList.OrderBy(x => x.score).ToList();
 
-        goldScoreText.text = "" + highScoreEntryList[0];
-        silverScoreText.text = "" + highScoreEntryList[1];
-        bronzeScoreText.text = "" + highScoreEntryList[2];
+        goldScoreText.text = "" + 100;
+        silverScoreText.text = "" + highScoreEntryListOrder[1];
+        bronzeScoreText.text = "" + highScoreEntryListOrder[2];
     }
+
     private class HighScoreEntry{
         public int score;
     }

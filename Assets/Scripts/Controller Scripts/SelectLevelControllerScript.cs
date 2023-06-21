@@ -16,7 +16,7 @@ public class SelectLevelControllerScript : MonoBehaviour
     public GameObject carLevels;
 
     public GameObject loadingScreen, selectLevelScreen;
-    public Image progressSlider;
+    public Slider progressSlider;
     private float target;
 
     private void Start() {
@@ -70,25 +70,21 @@ public class SelectLevelControllerScript : MonoBehaviour
         SceneManager.LoadScene("SelectModeScene");
     }
 
-    public async void LoadScene (string sceneName){
-        target = 0;
-        progressSlider.fillAmount = 0;
-        
-        var scene = SceneManager.LoadSceneAsync(sceneName);
-        scene.allowSceneActivation = false;
-
+    public void LoadScene (string sceneName){
+        selectLevelScreen.SetActive(false);
         loadingScreen.SetActive(true);
 
-        do{
-            target = scene.progress;
-        }
-        while(scene.progress < 0.9f);
-
-        scene.allowSceneActivation = true;
-        loadingScreen.SetActive(false);
+        StartCoroutine(LoadLevelAsync(sceneName));
     }
 
-    void Update(){
-        progressSlider.fillAmount = Mathf.MoveTowards(progressSlider.fillAmount, target, 3 * Time.deltaTime);
+    IEnumerator LoadLevelAsync(string levelToLoad){
+        AsyncOperation loadOperation = SceneManager.LoadSceneAsync(levelToLoad);
+
+        while(!loadOperation.isDone)
+        {
+            float progressValue = Mathf.Clamp01(loadOperation.progress / 0.9f);
+            progressSlider.value = progressValue;
+            yield return null;
+        }
     }
 }
